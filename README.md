@@ -5,7 +5,7 @@
 
 ## Project
  **截图：**
- ![index](https://raw.githubusercontent.com/LeeeYudE/iOSDownloadView/master/screenshot/1.gif)
+ ![index](https://raw.githubusercontent.com/LeeeYudE/TencentNews/master/screenshot/1.gif)
 
 
 
