@@ -18,7 +18,10 @@
     <br />
    
 ![index](https://raw.githubusercontent.com/LeeeYudE/TencentNews/master/screenshot/4.gif)
-
+    <br />
+    <br />
+   
+![index](https://raw.githubusercontent.com/LeeeYudE/TencentNews/master/screenshot/5.gif)
 
 
  
