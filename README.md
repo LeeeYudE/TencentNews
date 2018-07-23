@@ -5,10 +5,16 @@
 
 ## Project
  **截图：**
- ![index](https://raw.githubusercontent.com/LeeeYudE/TencentNews/master/screenshot/1.gif)
-  ![index](https://raw.githubusercontent.com/LeeeYudE/TencentNews/master/screenshot/2.gif)
-   ![index](https://raw.githubusercontent.com/LeeeYudE/TencentNews/master/screenshot/3.gif)
-    ![index](https://raw.githubusercontent.com/LeeeYudE/TencentNews/master/screenshot/4.gif)
+![index](https://raw.githubusercontent.com/LeeeYudE/TencentNews/master/screenshot/1.gif)
+ 
+ 
+![index](https://raw.githubusercontent.com/LeeeYudE/TencentNews/master/screenshot/2.gif)
+  
+  
+![index](https://raw.githubusercontent.com/LeeeYudE/TencentNews/master/screenshot/3.gif)
+   
+   
+![index](https://raw.githubusercontent.com/LeeeYudE/TencentNews/master/screenshot/4.gif)
 
 
 
