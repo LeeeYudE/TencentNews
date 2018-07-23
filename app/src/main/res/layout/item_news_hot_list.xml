@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="202dp">
+
+    <news.tencent.charco.android.widget.MyHorizontalRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="202dp"/>
+
+    </news.tencent.charco.android.widget.MyHorizontalRefreshLayout>
+
+    <TextView
+        android:layout_marginTop="17dp"
+        android:layout_marginLeft="24dp"
+        android:drawableLeft="@drawable/icon_news_hot"
+        android:drawablePadding="8dp"
+        android:text="@string/hot_spots_of_selected"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</FrameLayout>
+
+
+    <TextView
+        android:id="@+id/tv_more_hot"
+        android:layout_width="wrap_content"
+        android:layout_height="47dp"
+        android:gravity="center"
+        android:textSize="15sp"
+        android:layout_gravity="center_horizontal"
+        android:text="查看更多热点事件"
+        android:drawablePadding="5dp"
+        android:drawableRight="@drawable/icon_departure_hot"
+        android:textColor="@color/brown_text"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#f6f6f6"/>
+
+</LinearLayout>

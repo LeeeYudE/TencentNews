@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@+id/drawer_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--新闻界面-->
+    <LinearLayout
+        android:id="@+id/llt_news"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:clipChildren="false">
+
+        <LinearLayout
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/icon_tencent_logo"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+
+            <TextView
+                android:id="@+id/tv_seacher"
+                android:text="搜索新闻"
+                android:layout_marginLeft="15dp"
+                android:padding="5dp"
+                android:gravity="center_vertical"
+                android:drawableLeft="@drawable/icon_seacher"
+                android:layout_marginRight="15dp"
+                android:textColor="#c6c6c6"
+                android:textSize="14sp"
+                android:drawablePadding="6dp"
+                android:background="@drawable/shape_seacher_bg"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="44dp">
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="44dp">
+
+                <news.tencent.charco.android.widget.magicindicator.MagicIndicator
+                    android:id="@+id/magic_indicator"
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp" />
+
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_channel_shade_left"/>
+
+                <View
+                    android:layout_alignParentRight="true"
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_channel_shade_right"/>
+
+            </RelativeLayout>
+
+
+            <ImageView
+                android:id="@+id/iv_operation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:scaleType="center"
+                android:src="@drawable/add_channel"
+                android:layout_marginRight="15dp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#e8e8e8"
+            />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+    <!--搜索界面-->
+    <LinearLayout
+        android:id="@+id/llt_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_gravity="start">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <news.tencent.charco.android.widget.XEditText
+                android:id="@+id/et_search"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:textSize="15sp"
+                android:maxLines="1"
+                android:paddingTop="8dp"
+                android:hint="请输入搜索内容"
+                android:paddingBottom="8dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:gravity="center_vertical"
+                android:drawablePadding="6dp"
+                android:textColor="@color/black"
+                android:background="@drawable/shape_oval_grey"
+                app:x_clearDrawable="@drawable/icon_clear_text"
+                android:drawableLeft="@drawable/icon_small_seacher"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:id="@+id/tv_close_search"
+                android:text="取消"
+                android:textSize="16sp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <news.tencent.charco.android.widget.SearchRecyclerView
+            android:overScrollMode="never"
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.DrawerLayout>

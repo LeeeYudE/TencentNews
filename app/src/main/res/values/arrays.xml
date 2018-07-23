@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="channel">
+        <item>推荐</item>
+        <item>视频</item>
+        <item>热点</item>
+        <item>社会</item>
+        <item>娱乐</item>
+        <item>科技</item>
+        <item>汽车</item>
+        <item>体育</item>
+        <item>财经</item>
+        <item>军事</item>
+        <item>国际</item>
+        <item>时尚</item>
+        <item>游戏</item>
+        <item>旅游</item>
+        <item>历史</item>
+        <item>探索</item>
+        <item>美食</item>
+        <item>育儿</item>
+        <item>养生</item>
+        <item>故事</item>
+        <item>美文</item>
+    </string-array>
+
+    <string-array name="hot">
+        <item>最奇葩评比</item>
+        <item>最有钱的人</item>
+        <item>中国校友会</item>
+        <item>凌晨3点不回家</item>
+        <item>售房电话打爆120</item>
+        <item>张馨予再晒牵手照</item>
+        <item>雷佳音16岁旧照</item>
+        <item>沙漠种植水稻成功</item>
+        <item>小米 CDR</item>
+        <item>红牌改判黄牌</item>
+        <item>老船翻新首航沉海</item>
+        <item>杨丞琳祝福陈妍希</item>
+        <item>76人 推特小号</item>
+    </string-array>
+
+</resources>

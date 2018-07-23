@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <news.tencent.charco.android.widget.NoScrollViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
+    <com.chaychan.library.BottomBarLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/color_F3F5F4"
+        >
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@drawable/tab_home_normal"
+            app:iconSelected="@drawable/tab_home_selected"
+            app:itemText="新闻"
+            app:itemTextSize="8sp"
+            app:textColorNormal="@color/color_515051"
+            app:textColorSelected="@color/color_D33D3C"
+            app:itemMarginTop="-5dp"
+            app:openTouchBg="true"
+            app:touchDrawable="@drawable/selector_bottom_tab"
+            />
+
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@drawable/tab_video_normal"
+            app:iconSelected="@drawable/tab_video_selected"
+            app:itemText="视频"
+            app:itemTextSize="8sp"
+            app:textColorNormal="@color/color_515051"
+            app:textColorSelected="@color/color_D33D3C"
+            app:itemMarginTop="-5dp"
+            app:openTouchBg="true"
+            app:touchDrawable="@drawable/selector_bottom_tab"
+            />
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@drawable/tab_micro_normal"
+            app:iconSelected="@drawable/tab_micro_selected"
+            app:itemText="推荐"
+            app:itemTextSize="8sp"
+            app:textColorNormal="@color/color_515051"
+            app:textColorSelected="@color/color_D33D3C"
+            app:itemMarginTop="-5dp"
+            app:openTouchBg="true"
+            app:touchDrawable="@drawable/selector_bottom_tab"
+            />
+
+        <com.chaychan.library.BottomBarItem
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:iconNormal="@drawable/tab_me_normal"
+            app:iconSelected="@drawable/tab_me_selected"
+            app:itemText="我的"
+            app:itemTextSize="8sp"
+            app:textColorNormal="@color/color_515051"
+            app:textColorSelected="@color/color_D33D3C"
+            app:itemMarginTop="-5dp"
+            app:openTouchBg="true"
+            app:touchDrawable="@drawable/selector_bottom_tab"
+            />
+    </com.chaychan.library.BottomBarLayout>
+
+</LinearLayout>

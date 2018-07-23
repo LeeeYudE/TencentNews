@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="translucent">#aa000000</color>
+    <color name="white_translucent">#55FFFFFF</color>
+    <color name="black_translucent">#55000000</color>
+
+    <color name="black">#282828</color>
+    <color name="white">#ffffff</color>
+    <color name="grey_view">#f6f6f6</color>
+    <color name="gold_text">#a98273</color>
+    <color name="black_text">#282828</color>
+    <color name="brown_text">#5a4640</color>
+    <color name="transparent">#00000000</color>
+    <color name="news_resource">#a98273</color>
+    <color name="text_grey">#919191</color>
+    <color name="grey_bg">#f6f7f8</color>
+    <color name="color_D33D3C">#D33D3C</color>
+    <color name="mews_type_top">#3091D8</color>
+    <color name="color_BDBDBD">#BDBDBD</color>
+    <color name="color_F3F5F4">#F3F5F4</color>
+    <color name="color_515051">#515051</color>
+    <color name="color_F2F4F3">#F2F4F3</color>
+    <color name="color_222222">#222222</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_e6e6e6">#e6e6e6</color>
+    <color name="color_e8e8e8">#e8e8e8</color>
+    <color name="color_d43d3d">#d43d3d</color>
+    <color name="color_1a1b1d">#1a1b1d</color>
+    <color name="color_b11919">#b11919</color>
+    <color name="color_F96B6B">#F96B6B</color>
+    <color name="color_3091D8">#3091D8</color>
+    <color name="color_d8d8d8">#d8d8d8</color>
+    <color name="color_f4f5f6">#f4f5f6</color>
+    <color name="color_406599">#406599</color>
+    <color name="color_cacaca">#cacaca</color>
+    <color name="color_505050">#505050</color>
+    <color name="color_C1C1C1">#C1C1C1</color>
+    <color name="color_f85959">#f85959</color>
+    <color name="color_D5E8F6">#D5E8F6</color>
+    <color name="color_4592C6">#4592C6</color>
+    <color name="color_1affffff">#1affffff</color>
+    <color name="color_E6E8E7">#E6E8E7</color>
+
+</resources>

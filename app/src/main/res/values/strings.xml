@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TencentNews</string>
+    <string name="stick">置顶</string>
+    <string name="title">一个有希望的民族不能没有英雄</string>
+    <string name="hot_spots_of_selected">热点精选</string>
+    <string name="subject">专题</string>
+    <string name="poor_content_quality">内容质量差</string>
+    <string name="repeat_old_news">重复旧闻</string>
+    <string name="choose_reasons_to_optimize_for_you">选出理由，为您优化</string>
+    <string name="lost_interest">不感兴趣</string>
+</resources>

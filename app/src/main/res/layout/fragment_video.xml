@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+
+        <RelativeLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="44dp">
+
+            <news.tencent.charco.android.widget.magicindicator.MagicIndicator
+                android:id="@+id/magic_indicator"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="44dp" />
+
+            <View
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_channel_shade_left"/>
+
+            <View
+                android:layout_alignParentRight="true"
+                android:layout_width="15dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_channel_shade_right"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_operation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:scaleType="center"
+            android:src="@drawable/add_channel"
+            android:layout_marginRight="15dp"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#e8e8e8"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:overScrollMode="never"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
