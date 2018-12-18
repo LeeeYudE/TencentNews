@@ -64,8 +64,6 @@ public class NewsListFragment extends BaseFragment implements RecyclerView.OnChi
 
     @Override
     public void initListener() {
-        NewsFragment fragment = (NewsFragment) getParentFragment();
-        mRecyclerView.addOnScrollListener(fragment.getScrollListener());
     }
 
     @Override

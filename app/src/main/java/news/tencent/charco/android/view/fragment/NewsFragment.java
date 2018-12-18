@@ -1,12 +1,9 @@
 package news.tencent.charco.android.view.fragment;
 
-import android.animation.Animator;
-import android.animation.ValueAnimator;
 import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,8 +32,6 @@ import news.tencent.charco.android.widget.magicindicator.buildins.commonnavigato
 import news.tencent.charco.android.widget.magicindicator.buildins.commonnavigator.indicators.LinePagerIndicator;
 import news.tencent.charco.android.widget.magicindicator.buildins.commonnavigator.titles.ClipPagerTitleView;
 
-import static android.support.v7.widget.RecyclerView.SCROLL_STATE_IDLE;
-
 /**
  * Created 18/7/5 11:09
  * Author:charcolee
@@ -48,23 +43,18 @@ import static android.support.v7.widget.RecyclerView.SCROLL_STATE_IDLE;
 
 public class NewsFragment extends BaseFragment implements View.OnClickListener, BaseQuickAdapter.OnItemClickListener {
 
-    private static final int STATE_UP = 0;
-    private static final int STATE_DOWN = 1;
     public static final int offset = 100;
 
     private ViewPager mViewPager;
     private MainActivity mMainActivity;
-    private LinearLayout mLltNews;
+    private View mLltNews;
     private DrawerLayout mDrawerLayout;
     private List<BaseFragment> fragments = new ArrayList<>();
     private MagicIndicator mIndicator;
     private String[] channels ;
-    private View mToolbar;
     private SearchRecyclerView mSearchRecyclerView;
     private SearchAdapter mSearchAdapter;
     private int mDisplayWidth;
-    private int mToolbarState = STATE_DOWN;
-    private boolean mIsAnimationFinish = true;
 
     @Override
     protected int provideContentViewId() {
@@ -73,7 +63,6 @@ public class NewsFragment extends BaseFragment implements View.OnClickListener, 
 
     @Override
     public void initView(View rootView) {
-        mToolbar = findViewById(R.id.toolbar);
         mViewPager = findViewById(R.id.viewpager);
         mIndicator= findViewById(R.id.magic_indicator);
         mDrawerLayout = findViewById(R.id.drawer_layout);
@@ -238,126 +227,6 @@ public class NewsFragment extends BaseFragment implements View.OnClickListener, 
             case R.id.tv_close_search:
                 mDrawerLayout.closeDrawer(Gravity.START);
                 break;
-        }
-    }
-
-    public RecyclerView.OnScrollListener getScrollListener(){
-        return mScrollListener;
-    }
-
-    private int mDyUp;
-    private int mDyDown;
-    RecyclerView.OnScrollListener mScrollListener = new RecyclerView.OnScrollListener() {
-        @Override
-        public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-            if (newState == SCROLL_STATE_IDLE){
-                mDyUp = 0;
-                mDyDown = 0;
-
-            }
-        }
-
-        /**
-         * dy > 0 向上滑动
-         * dy < 0 向下滑动
-         */
-        @Override
-        public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-            if (dy > 0){
-                mDyUp += dy;
-                if (mDyUp > offset && mToolbarState == STATE_DOWN){
-                    upToolbar();
-                }
-            }else {
-                mDyDown += dy;
-                if (mDyDown < -offset && mToolbarState == STATE_UP){
-                    downToolbar();
-                }
-            }
-        }
-    };
-
-    public void upToolbar(){
-
-        if (mIsAnimationFinish && mToolbar.getHeight()!=0 ){
-            mIsAnimationFinish = false;
-            mToolbarState = STATE_UP;
-            ValueAnimator valueAnimator = ValueAnimator.ofInt(0, -mToolbar.getHeight());
-            valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-                @Override
-                public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                    int mar = (int) valueAnimator.getAnimatedValue();
-                    LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) mToolbar.getLayoutParams();
-                    params.topMargin = mar;
-                    mToolbar.setLayoutParams(params);
-                }
-            });
-            valueAnimator.addListener(new Animator.AnimatorListener() {
-                @Override
-                public void onAnimationStart(Animator animator) {
-
-                }
-
-                @Override
-                public void onAnimationEnd(Animator animator) {
-                    mIsAnimationFinish = true;
-                }
-
-                @Override
-                public void onAnimationCancel(Animator animator) {
-
-                }
-
-                @Override
-                public void onAnimationRepeat(Animator animator) {
-
-                }
-            });
-            valueAnimator.setDuration(500);
-            valueAnimator.setStartDelay(200);
-            valueAnimator.start();
-        }
-
-    }
-
-    public void downToolbar(){
-        if (mIsAnimationFinish && mToolbar.getHeight()!=0){
-            mIsAnimationFinish = false;
-            mToolbarState = STATE_DOWN;
-            ValueAnimator valueAnimator = ValueAnimator.ofInt( -mToolbar.getHeight() , 0 );
-            valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-                @Override
-                public void onAnimationUpdate(ValueAnimator valueAnimator) {
-                    int mar = (int) valueAnimator.getAnimatedValue();
-                    LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) mToolbar.getLayoutParams();
-                    params.topMargin = mar;
-                    mToolbar.setLayoutParams(params);
-                }
-            });
-            valueAnimator.addListener(new Animator.AnimatorListener() {
-                @Override
-                public void onAnimationStart(Animator animator) {
-
-                }
-
-                @Override
-                public void onAnimationEnd(Animator animator) {
-                    mIsAnimationFinish = true;
-                }
-
-                @Override
-                public void onAnimationCancel(Animator animator) {
-
-                }
-
-                @Override
-                public void onAnimationRepeat(Animator animator) {
-
-                }
-            });
-            valueAnimator.setDuration(500);
-            valueAnimator.setStartDelay(200);
-            valueAnimator.start();
         }
     }
 

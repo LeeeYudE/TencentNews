@@ -101,7 +101,6 @@
         android:id="@+id/rlt_bar"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
-        app:layout_behavior="news.tencent.charco.android.widget.NewsDetailBehavior"
         android:background="#00000000">
 
         <ImageView
